@@ -5,7 +5,11 @@ import { MdPermPhoneMsg } from "react-icons/md";
 import Image from "next/image";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <div>
+      <RiTeamFill />
+    </div>
+  );
 };
 
 export default Navbar;
