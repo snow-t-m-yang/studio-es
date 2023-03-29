@@ -14,7 +14,10 @@ module.exports = {
         tertiary: "#FFf9c2",
       },
       animation: {
-        fadeOutBottom: "fadeOutBottom 0.5s ease-out",
+        fadeOutBottom: "fadeOutBottom 1s ease-out",
+        fadeInRight: "fadeInRight 1s ease-out",
+        fadeInBottom: "fadeInBottom 1s ease-out",
+        fadeInUp: "fadeInUp 0.5s ease-out",
       },
       keyframes: {
         fadeOutBottom: {
@@ -25,6 +28,36 @@ module.exports = {
           "100%": {
             opacity: 0,
             transform: "translateY(100%)",
+          },
+        },
+        fadeInRight: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        fadeInBottom: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(100%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+        fadeInUp: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(-50%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
           },
         },
       },

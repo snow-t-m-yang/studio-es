@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Landing from "../components/Landing";
+import Event from "../components/Event";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
       <main className="bg-primary">
         <Landing />
+        <Event />
       </main>
     </>
   );

@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <nav
         className={`${
-          isScrolling ? "top-0" : "-top-[100px]"
+          isScrolling ? "top-0" : "-top-[100%]"
         } fixed w-full duration-500 bg-white`}
       >
         <ul className="flex px-3 py-5 text-4xl gap-x-5 text-primary">

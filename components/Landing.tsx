@@ -6,15 +6,15 @@ const Landing = () => {
   const isScrolling = useIsScrolling(true);
 
   return (
-    <header className="grid h-screen place-items-center px-7">
+    <header className="grid h-screen place-items-center place-content-center">
       <Image
         src={"/es-logo-name.svg"}
         alt="Eternal Story logo"
-        width={400}
-        height={400}
+        width={350}
+        height={350}
         className={`${
-          isScrolling ? "scale-75 self-center" : "scale-100 self-end"
-        }  duration-500`}
+          isScrolling ? "scale-75" : "scale-100 "
+        }  duration-500 self-end`}
       />
       <Image
         src={"/es-logo-font.svg"}
@@ -22,9 +22,26 @@ const Landing = () => {
         width={200}
         height={200}
         className={` ${
-          isScrolling && " animate-fadeOutBottom opacity-0"
+          isScrolling ? " animate-fadeOutBottom hidden" : "block"
         } self-start`}
       />
+      <div
+        className={`${
+          isScrolling ? "animate-fadeInRight block row-start-2" : "hidden"
+        } px-16 py-3 bg-white rounded-2xl shadow-lg`}
+      >
+        <h2 className="px-8 font-bold border-b-4 border-primary">團隊介紹</h2>
+      </div>
+      <div
+        className={` ${
+          isScrolling ? "animate-fadeInBottom block row-start-3" : "hidden"
+        }
+         p-10 text-white self-start`}
+      >
+        <p>
+          我們是一家成立於2021年的澳門本土工作室。我們的宗旨是推動澳門故事創作及文化創意產業。主要業務範疇包括：遊戲開發、以小說和漫畫為媒介孵化的原創IP及影視拍攝服務。
+        </p>
+      </div>
     </header>
   );
 };
