@@ -2,19 +2,19 @@ import { RiMessage2Fill } from "react-icons/ri";
 import { GiShoppingBag } from "react-icons/gi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import React, { useState } from "react";
-import { useIsScrolling } from "./hooks/useIsScrolling";
+import { useIsScrolled } from "./hooks/useIsScrolled";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSideBarOpen] = useState(false);
 
-  const isScrolling = useIsScrolling(true);
+  const isScrolled = useIsScrolled();
 
   return (
     <>
       <nav
         className={`${
-          isScrolling ? "top-0" : "-top-[100%]"
+          isScrolled ? "top-0" : "-top-[100%]"
         } fixed w-full duration-500 bg-white`}
       >
         <ul className="flex px-3 py-5 text-4xl gap-x-5 text-primary">

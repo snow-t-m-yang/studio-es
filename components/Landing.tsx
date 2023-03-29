@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { useIsScrolling } from "./hooks/useIsScrolling";
+import { useIsScrolled } from "./hooks/useIsScrolled";
 
 const Landing = () => {
-  const isScrolling = useIsScrolling(true);
+  const isScrolled = useIsScrolled();
 
   return (
     <header className="grid h-screen place-items-center place-content-center">
@@ -13,7 +13,7 @@ const Landing = () => {
         width={350}
         height={350}
         className={`${
-          isScrolling ? "scale-75" : "scale-100 "
+          isScrolled ? "scale-75" : "scale-100 "
         }  duration-500 self-end`}
       />
       <Image
@@ -22,19 +22,19 @@ const Landing = () => {
         width={200}
         height={200}
         className={` ${
-          isScrolling ? " animate-fadeOutBottom hidden" : "block"
+          isScrolled ? " animate-fadeOutBottom hidden" : "block"
         } self-start`}
       />
       <div
         className={`${
-          isScrolling ? "animate-fadeInRight block row-start-2" : "hidden"
+          isScrolled ? "animate-fadeInRight block row-start-2" : "hidden"
         } px-16 py-3 bg-white rounded-2xl shadow-lg`}
       >
         <h2 className="px-8 font-bold border-b-4 border-primary">團隊介紹</h2>
       </div>
       <div
         className={` ${
-          isScrolling ? "animate-fadeInBottom block row-start-3" : "hidden"
+          isScrolled ? "animate-fadeInBottom block row-start-3" : "hidden"
         }
          p-10 text-white self-start`}
       >
