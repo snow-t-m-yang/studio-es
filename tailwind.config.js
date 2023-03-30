@@ -12,6 +12,7 @@ module.exports = {
         primary: "#FFb93d",
         secondary: "#FFe247",
         tertiary: "#FFf9c2",
+        quaternary: "#927646",
       },
       animation: {
         fadeOutBottom: "fadeOutBottom 1s ease-out",

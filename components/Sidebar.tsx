@@ -6,52 +6,52 @@ import { BsVectorPen } from "react-icons/bs";
 import { MdWork } from "react-icons/md";
 import { MdPermPhoneMsg } from "react-icons/md";
 
-interface Sidebar {
+type Sidebar = {
   icon: string | React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   title: string;
   href: string;
-}
+};
 
 const SidebarItems: Sidebar[] = [
   {
     icon: RiTeamFill,
     title: "團隊介紹",
-    href: "/團隊介紹",
+    href: "#團隊介紹",
   },
   {
     icon: "/sidebar-icons/event-icon.png",
     title: "近期活動",
-    href: "/近期活動",
+    href: "#近期活動",
   },
   {
     icon: "/sidebar-icons/product-icon.png",
     title: "特色商品",
-    href: "/特色商品",
+    href: "#特色商品",
   },
   {
     icon: "/sidebar-icons/game-icon.png",
     title: "遊戲開發",
-    href: "/遊戲開發",
+    href: "#遊戲開發",
   },
   {
     icon: "/sidebar-icons/film-icon.png",
     title: "影片拍攝",
-    href: "/影片拍攝",
+    href: "#影片拍攝",
   },
   {
     icon: BsVectorPen,
     title: "漫畫作品",
-    href: "/漫畫作品",
+    href: "#漫畫作品",
   },
   {
     icon: MdWork,
     title: "訂製服務",
-    href: "/訂製服務",
+    href: "#訂製服務",
   },
   {
     icon: MdPermPhoneMsg,
     title: "聯絡我們",
-    href: "/聯絡我們",
+    href: "#聯絡我們",
   },
 ];
 
@@ -63,9 +63,9 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
     <ul
       className={`${
         isSidebarOpen ? "-left-5" : "-left-[100%]"
-      } top-[80px] duration-500 fixed flex flex-col gap-y-1 text-xl`}
+      } top-[80px] duration-500 z-10  fixed flex flex-col gap-y-1 text-xl`}
     >
-      <Link href={SidebarItems[0].href}>
+      <a href={SidebarItems[0].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 mr-5 border-b-4 border-primary ">
             {SidebarItems[0].title}
@@ -74,8 +74,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             {React.createElement(SidebarItems[0].icon)}
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[1].href}>
+      </a>
+      <a href={SidebarItems[1].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[1].title}
@@ -89,8 +89,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             />
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[2].href}>
+      </a>
+      <a href={SidebarItems[2].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[2].title}
@@ -104,8 +104,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             />
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[3].href}>
+      </a>
+      <a href={SidebarItems[3].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[3].title}
@@ -119,8 +119,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             />
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[4].href}>
+      </a>
+      <a href={SidebarItems[4].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[4].title}
@@ -134,8 +134,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             />
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[5].href}>
+      </a>
+      <a href={SidebarItems[5].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[5].title}
@@ -144,8 +144,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             {React.createElement(SidebarItems[5].icon)}
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[6].href}>
+      </a>
+      <a href={SidebarItems[6].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[6].title}
@@ -154,8 +154,8 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             {React.createElement(SidebarItems[6].icon)}
           </span>
         </li>
-      </Link>
-      <Link href={SidebarItems[7].href}>
+      </a>
+      <a href={SidebarItems[7].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
           <span className="px-12 border-b-4 border-primary ">
             {SidebarItems[7].title}
@@ -164,7 +164,7 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
             {React.createElement(SidebarItems[7].icon)}
           </span>
         </li>
-      </Link>
+      </a>
     </ul>
   );
 };

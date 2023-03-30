@@ -6,7 +6,10 @@ const Landing = () => {
   const isScrolled = useIsScrolled();
 
   return (
-    <header className="grid h-screen place-items-center place-content-center">
+    <header
+      id="團隊介紹"
+      className="grid h-screen place-items-center place-content-center"
+    >
       <Image
         src={"/es-logo-name.svg"}
         alt="Eternal Story logo"
