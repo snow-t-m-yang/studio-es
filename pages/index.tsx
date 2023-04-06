@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Landing from "../components/Landing";
-import Event from "../components/Event";
+import Landing from "@/components/Landing";
+import Event from "@/components/Event";
+import Product from "@/components/Product";
 
 const inter = Inter({ subsets: ["latin"] });
+
 export default function Home() {
   return (
     <>
@@ -17,6 +19,7 @@ export default function Home() {
       <main className="bg-primary">
         <Landing />
         <Event />
+        <Product />
       </main>
     </>
   );
