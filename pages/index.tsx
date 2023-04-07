@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Landing from "@/components/Landing";
 import Event from "@/components/Event";
 import Product from "@/components/Product";
+import Game from "@/components/Game";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function Home() {
         <Landing />
         <Event />
         <Product />
+        <Game />
       </main>
     </>
   );
