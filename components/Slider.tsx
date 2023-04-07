@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import { motion } from "framer-motion";
+import Layout from "./Layout";
 
 type EventItems = {
   alt: string;
@@ -59,12 +61,19 @@ const Slider = () => {
   return (
     <div>
       <div className="relative grid  w-full px-2 pt-3 bg-white rounded-[40px] group">
-        <Image
-          src={EventItems[currentIndex].src}
-          alt={EventItems[currentIndex].alt}
-          width={400}
-          height={300}
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          key={currentIndex}
+        >
+          <Image
+            src={EventItems[currentIndex].src}
+            alt={EventItems[currentIndex].alt}
+            width={400}
+            height={300}
+          />
+        </motion.div>
         <div
           onClick={() => prevSlide()}
           className="absolute hidden p-2 text-2xl text-white rounded-full cursor-pointer left-1 top-1/2 bg-black/20 group-hover:block"
