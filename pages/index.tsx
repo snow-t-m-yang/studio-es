@@ -5,6 +5,7 @@ import Landing from "@/components/Landing";
 import Event from "@/components/Event";
 import Product from "@/components/Product";
 import Game from "@/components/Game";
+import Film from "@/components/Film";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Event />
         <Product />
         <Game />
+        <Film />
       </main>
     </>
   );

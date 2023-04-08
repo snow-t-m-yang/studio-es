@@ -17,7 +17,7 @@ const Navbar = () => {
           isScrolled ? "top-0" : "-top-[100%]"
         } fixed w-full z-40 duration-500 bg-white`}
       >
-        <ul className="flex px-3 py-5 text-4xl gap-x-5 text-primary">
+        <ul className="flex px-3 py-3 text-4xl gap-x-5 text-primary">
           <li
             className="mr-auto"
             onClick={() => setIsSideBarOpen(!isSidebarOpen)}
