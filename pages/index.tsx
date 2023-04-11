@@ -6,6 +6,9 @@ import Event from "@/components/Event";
 import Product from "@/components/Product";
 import Game from "@/components/Game";
 import Film from "@/components/Film";
+import Comic from "@/components/Comic";
+import Customize from "@/components/Customize";
+import Contact from "@/components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +27,9 @@ export default function Home() {
         <Product />
         <Game />
         <Film />
+        <Comic />
+        <Customize />
+        <Contact />
       </main>
     </>
   );

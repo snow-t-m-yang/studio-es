@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useReducer } from "react";
-import { motion } from "framer-motion";
 
 const Film = () => {
   const [isFilmBarPressed, setIsFilmBarPressed] = useReducer(
