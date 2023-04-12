@@ -10,6 +10,18 @@ const Contact = () => {
   return (
     <section id="聯絡我們" className="min-h-screen">
       <div className="relative mx-auto w-72">
+        {!isCameraPressed && (
+          <div className="absolute -left-12 top-[200px]">
+            <Image
+              src="/comic/comic-fingure.svg"
+              width={40}
+              height={40}
+              alt="comic"
+              className="-scale-x-100 animate-pulse"
+            />
+          </div>
+        )}
+
         <div className="absolute top-[70px] z-10">
           <Image
             src="/contact/contact-camara.svg"
