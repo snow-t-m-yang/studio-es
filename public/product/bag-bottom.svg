@@ -1,3 +1,15 @@
-<svg width="332" height="244" viewBox="0 0 332 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="332" height="357" viewBox="0 0 332 357" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="292" width="331" height="2" fill="#CFB788"/>
+<rect x="330" y="241" width="2" height="52" fill="#CFB788"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M166 357C255.47 357 328 330.137 328 297C328 263.863 255.47 237 166 237C76.5299 237 4 263.863 4 297C4 330.137 76.5299 357 166 357ZM166.505 354C254.581 354 325.981 328.48 325.981 297C325.981 265.52 254.581 240 166.505 240C78.4282 240 7.02804 265.52 7.02804 297C7.02804 328.48 78.4282 354 166.505 354Z" fill="#E5CD9F"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M166.5 356C255.97 356 328.5 328.913 328.5 295.5C328.5 262.087 255.97 235 166.5 235C77.0299 235 4.5 262.087 4.5 295.5C4.5 328.913 77.0299 356 166.5 356ZM166.5 352.975C254.313 352.975 325.5 327.243 325.5 295.5C325.5 263.757 254.313 238.025 166.5 238.025C78.6867 238.025 7.5 263.757 7.5 295.5C7.5 327.243 78.6867 352.975 166.5 352.975Z" fill="#C59E53"/>
+<rect y="237" width="331" height="56" fill="url(#paint0_linear_607_3763)"/>
 <path d="M0 0H332V244H0V0Z" fill="#CFB788"/>
+<rect y="243" width="2" height="51" fill="#CFB788"/>
+<defs>
+<linearGradient id="paint0_linear_607_3763" x1="165.5" y1="237" x2="165.5" y2="293" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8C6F36"/>
+<stop offset="1" stop-color="#D0A859"/>
+</linearGradient>
+</defs>
 </svg>

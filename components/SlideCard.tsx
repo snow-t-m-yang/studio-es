@@ -35,13 +35,34 @@ const SlideCard = () => {
         className="h-96 w-80"
       >
         <SwiperSlide className=" border-8 border-white rounded-[60px]">
-          <Image src={EventItems[0].src} alt={EventItems[0].alt} fill />
+          <Image
+            src={EventItems[0].src}
+            alt={EventItems[0].alt}
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+          />
         </SwiperSlide>
         <SwiperSlide className="border-8 border-white rounded-[60px]">
-          <Image src={EventItems[1].src} alt={EventItems[1].alt} fill />
+          <Image
+            src={EventItems[1].src}
+            alt={EventItems[1].alt}
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+          />
         </SwiperSlide>
         <SwiperSlide className="border-8 border-white rounded-[60px]">
-          <Image src={EventItems[2].src} alt={EventItems[2].alt} fill />
+          <Image
+            src={EventItems[2].src}
+            alt={EventItems[2].alt}
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+          />
         </SwiperSlide>
       </Swiper>
     </>

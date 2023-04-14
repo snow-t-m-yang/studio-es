@@ -9,7 +9,10 @@ const Game = () => {
   };
 
   return (
-    <section id="遊戲開發" className="grid h-screen place-content-center">
+    <section
+      id="遊戲開發"
+      className="grid min-h-screen mt-36 place-content-center"
+    >
       <div className="relative">
         <Image
           priority
