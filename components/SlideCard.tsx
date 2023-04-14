@@ -34,7 +34,7 @@ const SlideCard = () => {
         modules={[EffectCards]}
         className="h-96 w-80"
       >
-        <SwiperSlide className=" border-8 border-white rounded-[60px]">
+        <SwiperSlide className=" border-8 border-white rounded-[75px]">
           <Image
             src={EventItems[0].src}
             alt={EventItems[0].alt}
@@ -44,7 +44,7 @@ const SlideCard = () => {
               33vw"
           />
         </SwiperSlide>
-        <SwiperSlide className="border-8 border-white rounded-[60px]">
+        <SwiperSlide className="border-8 border-white rounded-[75px]">
           <Image
             src={EventItems[1].src}
             alt={EventItems[1].alt}
@@ -54,7 +54,7 @@ const SlideCard = () => {
               33vw"
           />
         </SwiperSlide>
-        <SwiperSlide className="border-8 border-white rounded-[60px]">
+        <SwiperSlide className="border-8 border-white rounded-[75px]">
           <Image
             src={EventItems[2].src}
             alt={EventItems[2].alt}

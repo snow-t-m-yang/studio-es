@@ -1,10 +1,48 @@
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Product = () => {
+  const [isStick, setIsStick] = useState(false);
+
+  const stickObjuectRef = useRef<HTMLInputElement>(null);
+
+  const isElementStickOnViewPortTop = (
+    stickSubject: HTMLInputElement | null,
+  ) => {
+    if (stickSubject !== null) {
+      const rect = stickSubject.getBoundingClientRect();
+      console.log(rect.top);
+
+      return rect.top === 0;
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentStateOfStick = isElementStickOnViewPortTop(
+        stickObjuectRef.current,
+      );
+
+      console.log(currentStateOfStick);
+      console.log(isStick);
+
+      if (
+        currentStateOfStick !== undefined &&
+        isStick !== currentStateOfStick
+      ) {
+        setIsStick(currentStateOfStick);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isStick]);
+
   return (
-    <section id="特色商品" className="relative w-full min-h-screen ">
-      <div className="sticky top-0 w-full ">
+    <section id="特色商品" className="relative min-h-screen ">
+      <div ref={stickObjuectRef} className="sticky top-0">
         {/* Title */}
         <div className="absolute left-0 right-0 z-20 px-16 py-3 mx-auto bg-white shadow-lg top-28 h-14 top-15 rigt-0 bottom-16 w-fit rounded-2xl">
           <h2 className="px-8 font-bold border-b-4 border-primary">特色商品</h2>
@@ -19,42 +57,39 @@ const Product = () => {
             width={310}
             alt="A bag full of presents"
           />
-          {/* Ring-top */}
-          {/* <Image
-            priority
-            src="/product/bag-ring-top.svg"
-            height={300}
-            width={300}
-            alt="A bag full of presents"
-            className="absolute top-48"
-          /> */}
         </div>
 
         {/* Bottom */}
-        <div className="absolute left-0 right-0 z-0 mx-auto w-fit">
+        <div className="absolute left-0 -top-[3px] right-0 z-0 mx-auto w-fit">
           <div>
             <Image
               priority
               src="/product/bag-bottom.svg"
-              height={300}
-              width={300}
+              height={303}
+              width={303}
               alt="A bag full of presents"
             />
           </div>
         </div>
 
-        {/* layer 2 */}
-        <motion.div className="absolute left-0 right-0 z-10 mx-auto w-fit">
-          <Image
-            priority
-            src="/product/product1.png"
-            height={300}
-            width={300}
-            alt="product key rings and stickers"
-          />
-        </motion.div>
-
-        <motion.div className="absolute left-0 right-0 z-10 mx-auto w-fit">
+        {/* Products */}
+        {isStick && (
+          <motion.div className="absolute left-0 right-0 z-10 mx-auto w-fit">
+            <Image
+              priority
+              src="/product/product1.png"
+              height={300}
+              width={300}
+              alt="product key rings and stickers"
+            />
+          </motion.div>
+        )}
+        {/* 
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="absolute left-0 right-0 z-10 mx-auto w-fit"
+        >
           <Image
             priority
             src="/product/product2.png"
@@ -62,7 +97,7 @@ const Product = () => {
             width={300}
             alt="product key rings and stickers"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
