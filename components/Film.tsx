@@ -14,9 +14,9 @@ const Film = () => {
           onClick={setIsFilmBarPressed}
           className="absolute z-20 w-[270px] h-40 left-16 rounded-3xl "
         />
-        <div className="absolute w-full h-[220px] -top-[216px] left-[70px] z-10 bg-primary"></div>
+        <div className="absolute  w-full h-[220px] -top-[216px] left-[70px] z-10 bg-primary"></div>
         <div className="relative w-96 h-96">
-          <div className="absolute z-10 w-ful left-5 h-96">
+          <div className="absolute z-10 left-5 ">
             <Image
               priority
               src="/film/filmbar.svg"
