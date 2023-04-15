@@ -52,7 +52,7 @@ const Navbar = () => {
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute left-0 right-0 flex flex-col items-center w-64 py-5 mx-auto space-y-4 bg-white top-96 shadow-3xl px-7 rounded-xl"
+            className="absolute left-0 right-0 flex flex-col items-center w-64 py-5 mx-auto space-y-4 bg-white border-4 top-96 shadow-3xl px-7 rounded-xl"
           >
             <RiErrorWarningFill className="text-4xl text-primary" />
             <p className="font-bold ">購物車系統暫未開放</p>

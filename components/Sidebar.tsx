@@ -63,7 +63,7 @@ const Sidebar = ({ isSidebarOpen }: SidebarProps) => {
     <ul
       className={`${
         isSidebarOpen ? "-left-5" : "-left-[100%]"
-      } top-[80px] duration-500 z-20  fixed flex flex-col gap-y-1 text-xl`}
+      } top-[80px] duration-500 z-40  fixed flex flex-col gap-y-1 text-xl`}
     >
       <a href={SidebarItems[0].href}>
         <li className="relative flex py-3 px-9 rounded-3xl gap-x-7 bg-tertiary ">
