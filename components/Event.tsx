@@ -4,7 +4,7 @@ const Event = () => {
   return (
     <section
       id="近期活動"
-      className="grid h-screen overflow-hidden place-items-center gap-y-7 place-content-center"
+      className="grid h-screen mb-24 overflow-hidden place-items-center gap-y-7 place-content-center"
     >
       <div className="px-16 py-3 bg-white shadow-lg rounded-2xl">
         <h2 className="px-8 font-bold border-b-4 border-primary">近期活動</h2>
