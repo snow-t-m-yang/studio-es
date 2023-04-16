@@ -26,6 +26,7 @@ const EventItems: EventItems[] = [
 ];
 
 const SlideCard = () => {
+  console.log("slideCard is rendered");
   return (
     <>
       <Swiper

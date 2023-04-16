@@ -13,7 +13,6 @@ const Product = () => {
     const isReachedOnTop = () => {
       if (ref.current !== null) {
         const rect = ref.current.getBoundingClientRect();
-        console.log(rect.top);
         return rect.top === -28 && rect.bottom <= window.innerHeight;
       }
       return false;
@@ -22,7 +21,6 @@ const Product = () => {
     useEffect(() => {
       const handleScroll = () => {
         const Reached = isReachedOnTop();
-
         if (Reached !== isReached) {
           setIsReached(Reached);
         }
@@ -37,17 +35,13 @@ const Product = () => {
 
   const isReached = useReachedViewPortTop(targetRef);
 
-  const onReachedViewPortTop = () => {
-    if (!isReached) {
+  useEffect(() => {
+    if (isReached) {
       return;
     } else {
       setIsProductShown(true);
     }
-  };
-
-  useEffect(() => {
-    onReachedViewPortTop();
-  });
+  }, [isReached]);
 
   return (
     <section id="特色商品" className="relative min-h-screen">
